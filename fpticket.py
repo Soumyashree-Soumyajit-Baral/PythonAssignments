@@ -63,7 +63,7 @@ else:
 print('Final price of all the tickets is :',(fp1+fp2+fp3+fp4))
 print('No of availabe ticket is :',n-(n1+n2+n3+n4))
 
-'''
+
 
 
 
