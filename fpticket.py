@@ -105,7 +105,7 @@ else: print('invalid entry')
                                                                                   #print('No of availabe ticket is :',n-(n1+n2+n3+n4))
 
 '''
-#  way having extra lines
+
 
 n=int(input('Enter no. of tickets'))
 p=int(input('Enter the price of single ticket'))
