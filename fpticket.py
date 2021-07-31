@@ -110,36 +110,33 @@ else: print('invalid entry')
 n=int(input('Enter no. of tickets'))
 p=int(input('Enter the price of single ticket'))
 print('Price of tickets is :',p*n)
-y=input('Do you have that balance(y/n) :')
+y=input('Do you have that much balance(y/n) :')
 if y.lower()=='yes' or y.lower()=='y' :
     n1=int(input('Enter no. of senior citizens'))
     n2=int(input('Enter no. of childs'))
     n3=int(input('Enter no. of minors'))
-    n4=n-(n1+n2+n3)                                                                 #int(input('Enter no. of adults'))
+    n4=n-(n1+n2+n3)                                                                 
     if n1<=n :
-        d=20
-        fp1=n1*(p-(p*d/100))
+        d1=20
         print('senior citizen will get 20% discount.')      
-        print('the price of tickets after discount is :',fp1)
+        print('the price of tickets after discount is :',n1*(p-(p*d1/100)))
         if n2<=(n-n1) :
-            d=100
-            fp2=n2*(p-(p*d/100))
+            d2=100
             print('child will get 100% discount.')  
-            print('the price of tickets after discount is :',fp2)
+            print('the price of tickets after discount is :',n2*(p-(p*d2/100)))
             if n3<=(n-(n1+n2)) :
-                d=50
-                fp3=n3*(p-(p*d/100))
+                d3=50
                 print('minors will get 50% discount.')     
-                print('the price of tickets after discount is :',fp3)
+                print('the price of tickets after discount is :',n3*(p-(p*d3/100)))
                 if n4!=0:                                                             #<=(n-(n1+n2+n3)) :
-                    d=0
-                    fp4=n4*(p-(p*d/100))
+                    d4=0
+                    sum=n1*(p-(p*d1/100))+n2*(p-(p*d2/100))+n3*(p-(p*d3/100))+n4*(p-(p*d4/100))
                     print('adults will not get any discount.')           
-                    print('the price of tickets after discount is :',fp4)
-                    print('Final price of all the tickets is :',(fp1+fp2+fp3+fp4))
+                    print('the price of tickets after discount is :',n4*(p-(p*d4/100)))
+                    print('Final price of all the tickets is :',sum)
                 else: print('invalid entry')
             else: print('invalid entry')
-        else: print('invalid entry')                                                         #print('Final price of all the tickets is :',(fp1+fp2+fp3+fp4))
+        else: print('invalid entry')                                                         
     else: print('invalid entry')                                
 else: print('kripeyaa aap ghar wapes jaye,, Mummy se paise lekar aaye,, fer milega ticket..samjhe!')
 
