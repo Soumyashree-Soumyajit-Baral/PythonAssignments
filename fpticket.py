@@ -103,6 +103,29 @@ if n1<=n :
 else: print('invalid entry')                                
 
                                                                                   #print('No of availabe ticket is :',n-(n1+n2+n3+n4))
+'''
+
+
+n=int(input('Enter no. of tickets'))
+p=int(input('Enter the price of single ticket'))
+n1=int(input('Enter no. of senior citizens'))
+n2=int(input('Enter no. of childs'))
+n3=int(input('Enter no. of minors'))
+n4=n-(n1+n2+n3)
+price=0
+if n1<=n:
+    price+=(n1*p)*80/100
+    if n2<=(n-n1):
+        price+=0
+        if n3<=(n-(n1+n2)):
+            price+=(n3*p)*50/100
+            if n4<=(n-(n1+n2+n3)):
+                price+=n4*p
+                print('Final price of the tickets is :',price)
+
+
+
+
 
 '''
 
@@ -140,5 +163,5 @@ if y.lower()=='yes' or y.lower()=='y' :
     else: print('invalid entry')                                
 else: print('kripeyaa aap ghar wapes jaye,, Mummy se paise lekar aaye,, fer milega ticket..samjhe!')
 
-
+'''
 
