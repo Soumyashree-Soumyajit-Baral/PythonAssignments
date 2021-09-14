@@ -1,5 +1,5 @@
 from datetime import date
-
+'''
 dd=int(input('Enter your Birth Date :'))
 mm=int(input('Enter your Birth Month :'))
 yy=int(input('Enter your Birth Year :'))        
@@ -19,6 +19,17 @@ d=((cd.day+months)-dob.day if (dob.day>cd.day and dob.month>=cd.month)else (cd.d
    else cd.day-dob.day if ((cd.month<dob.month) and (dob.day<cd.day)) else cd.day-dob.day)
 print(f'Your Age is : {y}years, {m}months, {d}days')
 print('Thank You ! Please Come again whenever you forget your Age.')
-
-
+'''
+dd=int(input('Enter your Birth Date :'))
+mm=int(input('Enter your Birth Month :'))
+yy=int(input('Enter your Birth Year :'))        
+dob=date(yy,mm,dd)
+cd=date.today()
+y=cd.year-dob.year-((cd.month,cd.day) < (dob.month,dob.day))
+m=(((cd.month-1)+12)-dob.month if(dob.day>cd.day and dob.month>=cd.month)else(cd.month-1)-dob.month if((cd.month>dob.month)and(dob.day>cd.day))
+   else(cd.month+12)-dob.month if ((cd.month<dob.month) and (dob.day<cd.day)) else (cd.month-dob.month))
+d=((cd.day+31)-dob.day if (dob.day>cd.day and dob.month>=cd.month)else (cd.day+31)-dob.day if((cd.month>dob.month)and(dob.day>cd.day))
+   else cd.day-dob.day if ((cd.month<dob.month) and (dob.day<cd.day)) else cd.day-dob.day)
+print(f'Your Age is : {y}years, {m}months, {d}days')
+print('Thank You ! Please Come again whenever you forget your Age.')
 
